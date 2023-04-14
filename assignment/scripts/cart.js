@@ -18,9 +18,18 @@ function listItems(basket) {
 console.log(listItems);
 
 console.log(`Basket is ${basket}`);
-console.log('Adding apples (expect true)', addItem('apples'));
+console.log('Adding noodles (expect true)', addItem('noddles'));
 console.log(`Basket is now ${basket}`);
 
 console.log(`Basket is ${basket}`);
-console.log('Adding caramel (expect true)', addItem('caramel'));
+console.log('Adding shrimp (expect true)', addItem('shrimp'));
 console.log(`Basket is now ${basket}`);
+
+console.log(`Basket is ${basket}`);
+console.log('Adding alfredo sauce (expect true)', addItem('alfredo sauce'));
+console.log(`Basket is now ${basket}`);
+
+function empty() {
+ basket = [];
+}
+console.log('The basket is now empty');
