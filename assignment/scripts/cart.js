@@ -60,4 +60,13 @@ function empty() {
 }
 console.log('The basket is now empty');
 
-
+function removeItem(item) {
+    let index = basket.indexOf(item);
+    if (index !== -1) {
+        basket.splice(index, 1);
+    } else {
+        return basket
+    }
+}
+console.log(removeItem('toast'));
+console.log(basket);
