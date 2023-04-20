@@ -14,14 +14,7 @@ console.log(maxItems);
      return false;
     }
  } 
- 
 
-function listItems(array) {
-    for (i = 0; i < array.length; i++) {
-        console.log(array[i]);
-    }
-}
- 
 console.log(`Basket is`, basket);
 console.log('Adding noodles (expect true)', addItem('noddles'));
 console.log('Basket is', basket);
@@ -46,6 +39,14 @@ console.log('Basket is', basket);
 console.log('Adding peaches (expect false)', addItem('peaches'));
 console.log('Basket is', basket);
 
+function listItems(basket) {
+    for (i = 0; i < basket.length; i++) {
+        console.log(basket[i]);
+    }
+}
+console.log(listItems(['noodles', 'pasta', 'alfredo', 'spices', 'toast']));
+//each is separate at basket[i], unsure why they aren't showing on 47.
+
 function isFull() {
     if(basket.length < maxItems) {
         return false;
@@ -54,11 +55,6 @@ function isFull() {
     }
 }
 console.log(isFull());
-
-function empty() {
- basket = [];
-}
-console.log('The basket is now empty');
 
 function removeItem(item) {
     let index = basket.indexOf(item);
@@ -70,3 +66,10 @@ function removeItem(item) {
 }
 console.log(removeItem('toast'));
 console.log(basket);
+
+function empty() {
+    basket = [];
+   }
+   console.log('The basket is now empty', empty([]));
+   
+// had to move to last or it effected how removeItem was showing in log
